@@ -16,4 +16,13 @@ app.use(express.static('public')) // means it will save our files in public fold
 app.use(cookieParser())
 
 
+
+// routes 
+import userRouter from './routes/user.routes.js'
+
+
+// routers Desclaration
+app.use("/api/v1/users",userRouter) // this is prefix
+
+
 export {app }
