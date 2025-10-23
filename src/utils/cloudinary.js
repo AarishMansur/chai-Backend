@@ -18,6 +18,7 @@ import fs from 'fs'
             return response
         } catch (error) {
             fs.unlinkSync(localFilePath) // removed the locally saved tempory file as the upload operation got failed
+            fs.unlinkSync(localFilePath)
             return null;
         }
     }
